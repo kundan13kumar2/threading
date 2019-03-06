@@ -1,2 +1,7 @@
-com/thread/learn/NewClass.class
+com/thread/learn/message/Message.class
 com/thread/learn/Basic.class
+com/thread/learn/message/Notifier.class
+com/thread/learn/message/Waiter.class
+com/thread/learn/NewClass.class
+com/thread/learn/message/RunnerClass.class
+com/thread/learn/ThreadLambda.class

@@ -7,7 +7,7 @@ public class Basic extends Thread {
     }
 
     public static void main(String[] args) {
-        Thread th1 = new Thread(new Basic(), "A");
+        Thread th1 = new Basic();
         th1.start();
     }
 }
