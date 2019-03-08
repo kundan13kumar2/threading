@@ -1,7 +1,13 @@
+/home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/com/thread/message/Notifier.java
+/home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/com/thread/race/RaceConditionProblem.java
+/home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/com/thread/race/OperationClass.java
+/home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/com/thread/threadsafety/SynchronizedClass.java
+/home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/com/thread/message/Message.java
+/home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/com/thread/message/Waiter.java
 /home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/Basic.java
+/home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/com/thread/message/RunnerClass.java
 /home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/ThreadLambda.java
-/home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/message/Waiter.java
-/home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/message/Message.java
-/home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/message/RunnerClass.java
-/home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/message/Notifier.java
+/home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/com/thread/daemon/DaemonRunner.java
 /home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/NewClass.java
+/home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/com/thread/daemon/DaemonThread.java
+/home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/com/thread/threadsafety/RunnerClass.java

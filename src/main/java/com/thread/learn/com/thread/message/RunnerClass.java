@@ -1,4 +1,4 @@
-package com.thread.learn.message;
+package com.thread.learn.com.thread.message;
 
 public class RunnerClass {
 
