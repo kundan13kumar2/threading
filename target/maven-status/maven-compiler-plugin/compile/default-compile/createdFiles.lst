@@ -18,5 +18,6 @@ com/thread/learn/com/thread/ProducerConsumer/ProConsRunner.class
 com/thread/learn/com/thread/race/RaceConditionProblem.class
 com/thread/learn/com/thread/race/OperationClass.class
 com/thread/learn/com/thread/callable/SummantionThread.class
+com/preparation/FlipZeroToMakeMaxOne.class
 com/thread/learn/com/thread/message/Waiter.class
 com/thread/learn/com/thread/callable/FutureTaskExample.class

@@ -7,6 +7,7 @@
 /home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/com/thread/threadsafety/SynchronizedClass.java
 /home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/com/thread/ProducerConsumer/ProConsRunner.java
 /home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/com/thread/message/Message.java
+/home/deep/IdeaProjects/threading/src/main/java/com/preparation/FlipZeroToMakeMaxOne.java
 /home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/com/thread/message/Waiter.java
 /home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/Basic.java
 /home/deep/IdeaProjects/threading/src/main/java/com/thread/learn/com/thread/ProducerConsumer/Consumer.java
