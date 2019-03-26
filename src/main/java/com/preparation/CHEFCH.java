@@ -51,6 +51,26 @@ public class CHEFCH {
     }
 
 
+    public static int otherCounter(String str) {
+        int plus = 0, minus = 0;
+
+
+        char[] charArray = str.toCharArray();
+        int result = 0;
+        for (int i = 0; i < charArray.length; i++) {
+
+            char ch = charArray[i];
+            if (i % 2 == 0)
+                result = ch == '-' ? ++minus : ++plus;
+            else
+                result = ch == '-' ? ++plus : ++minus;
+        }
+
+        return Math.min(plus, minus);
+
+    }
+
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -58,7 +78,7 @@ public class CHEFCH {
 
         while (t > 0) {
             String string = scanner.next();
-            System.out.println(count(string));
+            System.out.println(otherCounter(string));
             t--;
         }
 
