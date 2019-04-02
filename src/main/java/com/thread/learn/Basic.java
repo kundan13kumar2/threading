@@ -1,13 +1,50 @@
 package com.thread.learn;
 
-public class Basic extends Thread {
+public class Basic {
 
-    public void run() {
-        System.out.println("Welcome to Threading World. " + Thread.currentThread().getName());
+    static String name;
+
+    public Basic(String name) {
+        this.name = name;
     }
 
-    public static void main(String[] args) {
-        Thread th1 = new Basic();
-        th1.start();
+    public void gg() {
+        System.out.println(name + " M1");
+        System.out.println(name + " M2");
+    }
+
+    public static void ss(String kk) {
+        System.out.println(name+ " "+kk );
+    }
+
+
+    public static void main(String[] args) throws InterruptedException {
+
+        Basic bs = new Basic("01");
+
+        Thread t1 = new Thread() {
+            public void run() {
+                bs.gg();
+            }
+        };
+
+        Thread t2 = new Thread() {
+            public void run() {
+                ss("kk");
+            }
+        };
+
+        Thread t3 = new Thread() {
+            public void run() {
+                ss("pp");
+            }
+        };
+
+        t1.start();
+        t2.start();
+        t3.start();
+        t1.join();
+        t2.join();
+        t3.join();
     }
 }
