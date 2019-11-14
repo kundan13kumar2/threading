@@ -18,29 +18,32 @@ public class HackerlandHR {
         int counter = 0;
         int initialValue = 0;
         int i = 0;
-        for (i = 1; i < x.length; i++) {
-            initialValue = x[i - 1];
-            while (i < x.length && x[i] - initialValue < k)
+        while (i < x.length - 1) {
+            initialValue = x[i];
+            while (i < x.length && x[i] - initialValue <= k)
                 i++;
 
             counter++;
 
             if (i < x.length && x[i] - initialValue > k) {
-                initialValue = x[i - 1];
+
+                initialValue = x[--i];
+
             }
             while (i < x.length && x[i] - initialValue <= k)
                 i++;
 
         }
-
-        if (i > x.length)
+        if (i == (x.length - 1)) {
             counter++;
+        }
         return counter;
     }
 
+
     public static void main(String[] args) {
 
-        int[] arr = {1, 2, 3, 4, 5};
+        int[] arr = {2, 2, 2, 2, 1, 1, 1, 1};
         System.out.println(count(arr, 2));
 
     }
