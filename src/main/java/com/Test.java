@@ -5,10 +5,29 @@ import java.util.*;
 
 public class Test {
 
+    public static void recur(int n,int k,boolean flag){
 
+        if(n==k && flag)
+            return;
+        if(n<=0)
+            flag=true;
+
+        System.out.print(n+" ");
+        if(!flag)
+            recur(n-5,k,flag);
+        else
+        recur(n+5,k,flag);
+
+    }
     public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt();
+        while(t-- >0){
+            int n=sc.nextInt();
+            recur(n,n,false);
+        }
 
-        int[] arr = {1, 2, 3, 4, 3, 2, 2, 3, 4};
+       /* int[] arr = {1, 2, 3, 4, 3, 2, 2, 3, 4};
 
         Map<Integer, IntFreq> freqMap = new HashMap<>();
 
@@ -27,10 +46,10 @@ public class Test {
         System.out.print("4 ");
         for (IntFreq i : values)
             System.out.print(i.num + " ");
-/**
+*//**
  *  My First Approach
- */
-/*        List<IntFreq> freqList = new ArrayList<>();
+ *//*
+*//*        List<IntFreq> freqList = new ArrayList<>();
         for (Map.Entry<Integer, IntFreq> entry : freqMap.entrySet()) {
             if (entry.getKey() == 4)
                 continue;
