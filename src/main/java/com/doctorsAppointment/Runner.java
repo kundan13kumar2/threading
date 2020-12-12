@@ -4,7 +4,6 @@
  */
 package com.doctorsAppointment;
 
-import org.springframework.util.Assert;
 
 import java.util.*;
 
@@ -12,7 +11,7 @@ import java.util.*;
  * @author Kundan Kumar
  * @version $Id: Doctor.java, v 0.1 2020-05-23 6:32 AM Kundan Kumar Exp $$
  */
-public class Runner {
+public class Runner{} /*{
     static int currentTime = 0;
 
 
@@ -196,4 +195,4 @@ public class Runner {
 
     }
 
-}
+}*/

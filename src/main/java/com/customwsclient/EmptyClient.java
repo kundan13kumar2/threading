@@ -4,12 +4,9 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.ByteBuffer;
 
-import org.java_websocket.client.WebSocketClient;
-import org.java_websocket.drafts.Draft;
-//import org.java_websocket.drafts.Draft_6455;
-import org.java_websocket.handshake.ServerHandshake;
 
-public class EmptyClient extends WebSocketClient {
+
+public class EmptyClient{/* extends WebSocketClient {
 
 	public EmptyClient(URI serverUri, Draft draft) {
 		super(serverUri, draft);
@@ -49,4 +46,5 @@ public class EmptyClient extends WebSocketClient {
 		WebSocketClient client = new EmptyClient(new URI("wss://services.govivace.com:49159/SpeakerId"));
 		client.connect();
 	}
-}
+*/}
+
