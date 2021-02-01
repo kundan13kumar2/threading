@@ -409,7 +409,7 @@ class Solution {
     static long arrayManipulation(int n, int[][] queries) {
 
         long[] dp = new long[n + 1];
-        for (int i = 0; i < queries.length ; i++) {
+        for (int i = 0; i < queries.length; i++) {
             int a = queries[i][0];
             int b = queries[i][1];
             int k = queries[i][2];
@@ -428,87 +428,158 @@ class Solution {
 
     }
 
+    public static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
+
+    int ans;
+
+    public void util(TreeNode root) {
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
+        q.add(new TreeNode(-1));
+        int currSum = 0;
+        int prevSum = 0;
+
+        while (!q.isEmpty()) {
+
+            TreeNode temp = q.remove();
+            if (temp.val != -1) {
+                if (temp.left != null) {
+                    q.add(temp.left);
+                    currSum += temp.left.val;
+                }
+                if (temp.right != null) {
+                    q.add(temp.right);
+                    currSum += temp.right.val;
+                }
+            } else {
+                if (!q.isEmpty()) {
+                    q.add(new TreeNode(-1));
+                    prevSum = currSum;
+                    currSum = 0;
+                } else {
+                    ans = prevSum;
+                    break;
+                }
+            }
+
+        }
+
+    }
+
+    static class Point {
+        int x;
+        int y;
+
+        Point(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
 
     public static void main(String[] args) {
 
-
-        int[][] arr = {{1, 2, 100},
-                {2, 5, 100},
-                {3, 4, 100}};
-        System.out.println( arrayManipulation(5, arr));
-
-
         Solution sol = new Solution();
-        // System.out.println(sol.validPalindrome("aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga"));
-        //  System.out.println(sol.wordPattern("abba", "dog dog dog dog"));
 
-//        ListNode node1 = new ListNode(1, null);
-//        ListNode node2 = new ListNode(2, null);
-////        Node node3 = new Node(2, null);
-//        Node node4 = new Node(1, null);
+        Point p1 = new Point(3, 1);
+        Point p2 = new Point(9, 0);
+        Point p3 = new Point(1, 0);
+        Point p4 = new Point(5, 3);
+        Point p5 = new Point(1, 4);
+        List<Point> pointList = new ArrayList<>();
+        pointList.add(p1);
+        pointList.add(p2);
+        pointList.add(p3);
+        pointList.add(p4);
+        pointList.add(p5);
 
-        //      node1.next = node2;
-//        node2.next = node3;
-//        node3.next = node4;
-
-     /*   ListNode head = node1;
-        ListNode p1 = head;
-        ListNode p2 = head.next;
-        while (p2 != null && p2.next != null) {
-            p1 = p1.next;
-            p2 = p2.next.next;
-        }
-
-        ListNode head1 = p1.next;
-
-        ListNode head2 = reverse(head1);
-
-        while (head != null && head2 != null) {
-            if (head.val != head2.val) {
-                System.out.println("false");
-                return;
+        int[][] points = new int[3][4];
+        Arrays.sort(points, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                return 0;
             }
-            head = head.next;
-            head2 = head2.next;
+        });
+        Collections.sort(pointList, new Comparator<Point>() {
+            @Override
+            public int compare(Point p1, Point p2) {
+                if (p1.x == p2.x)
+                    return p1.y - p2.y;
+                else
+                    return p1.x - p2.x;
+            }
+
+        });
+
+
+        for (Point p : pointList) {
+            System.out.println(p.x + " :: " + p.y);
         }
-        System.out.println(true);
-*/
 
-//    int[] arr={2,2,2,2,2};
-//    int k=4;
-//    sol.findLengthOfLCIS(arr);
+        TreeNode root = new TreeNode(1);
+        TreeNode root2 = new TreeNode(2);
+        TreeNode root3 = new TreeNode(3);
+        TreeNode root4 = new TreeNode(4);
+        TreeNode root5 = new TreeNode(5);
+        TreeNode root6 = new TreeNode(6);
+        TreeNode root7 = new TreeNode(7);
+        TreeNode root8 = new TreeNode(8);
 
-        //    System.out.println(sol.recur("1", 4, 1));
-        // int arr[] = {1, 4, 2, 5, 3};
-        String str = "";
+        root.left = root2;
+        root.right = root3;
 
-        //   System.out.println(sol.sumOddLengthSubarrays(arr));
+        root2.left = root4;
+        root2.right = root5;
 
-        int[] charArr = new int[26];
-        String str1 = "53456390";
-        char[] pp = str1.toCharArray();
+        root3.right = root6;
 
-        Arrays.sort(pp);
-//        System.out.println(sol.findMinFibonacciNumbers(7));
-//        System.out.println(sol.findMinFibonacciNumbers(10));
-//        System.out.println(sol.findMinFibonacciNumbers(1000000000));
+        root4.left = root7;
 
-        int[][] grid = {{3, 0, 8, 4}, {2, 4, 5, 7}, {9, 2, 6, 3}, {0, 3, 1, 0}};
-        System.out.println(sol.maxIncreaseKeepingSkyline(grid));
-//        for(int i=0;i<str1.length();i++)
-//        {
-//            int j=str1.charAt(i)-'a';
-//            charArr[j]++;
-//        }
-//        for(int i=0;i<26;i++)
-//            if(charArr[i]!=0){
-//                System.out.println((char) ('a'+i) +" " +charArr[i]);
-//            }
-//        String jewels="sdf";
-//        char[] jewelsArr=jewels.toCharArray();
-//        Set<Character> characters=new HashSet<>();
-//        for(int i=0;i<jewels.length();i++)
-//            characters.add(jewels.charAt(i));
+        root6.right = root8;
+
+        // sol.util(root);
+
+    }
+
+    public int numTeams(int[] arr) {
+        int n = arr.length;
+        int ans = 0;
+        for (int i = 0; i < n; i++) {
+            int l = 0;
+            int r = 0;
+            int l1 = 0;
+            int r1 = 0;
+            for (int j = 0; j < i; j++) {
+                if (arr[j] < arr[i])
+                    l++;
+                if (arr[j] > arr[i])
+                    l1++;
+            }
+            for (int j = i + 1; j < n; j++) {
+                if (arr[i] < arr[j])
+                    r++;
+                if (arr[i] > arr[j])
+                    r1++;
+            }
+            ans += (l*r) + (l1*r1);
+        }
+        return ans;
     }
 
     public int maxIncreaseKeepingSkyline(int[][] grid) {
