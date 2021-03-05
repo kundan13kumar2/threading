@@ -3,7 +3,7 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class LRUGeneric<K,V> {
+public class LRUGeneric<K, V> {
 
     private K key;
     private V val;
@@ -25,8 +25,8 @@ public class LRUGeneric<K,V> {
         if (cache.containsKey(key)) {
             //Custom eviction Policy
             queue.remove(key);
-        }else {
-            if(size==cacheLength){
+        } else {
+            if (size == cacheLength) {
                 queue.poll();
                 cache.remove(key);
             }
@@ -37,7 +37,10 @@ public class LRUGeneric<K,V> {
 
 
     public static void main(String[] args) {
+        LRUGeneric<Integer, String> lruGeneric = new LRUGeneric<>(2);
 
+        lruGeneric.putVal(1, "A");
+        System.out.println(lruGeneric.getVal(1));
 
     }
 
