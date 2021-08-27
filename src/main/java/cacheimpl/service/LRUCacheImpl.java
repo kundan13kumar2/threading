@@ -9,7 +9,7 @@ public class LRUCacheImpl implements Cache {
 
     @Override
     public void put(Integer key, Integer value) {
-
+        System.out.println("Hello");
     }
 
     @Override
