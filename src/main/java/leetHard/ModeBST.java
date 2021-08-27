@@ -1,7 +1,5 @@
 package leetHard;
 
-import scala.Int;
-
 import java.util.ArrayList;
 import java.util.List;
 
